@@ -84,3 +84,54 @@ func (rt RecordTypes) String() string {
 		return "UNKNOWN"
 	}
 }
+
+func (rt RecordTypes) NumberOfAttribute() int {
+	switch rt {
+	case CSSM_DL_DB_SCHEMA_INFO:
+		return 2
+	case CSSM_DL_DB_SCHEMA_INDEXES:
+		return 5
+	case CSSM_DL_DB_SCHEMA_ATTRIBUTES:
+		return 6
+	case CSSM_DL_DB_SCHEMA_PARSING_MODULE:
+		return 6
+	case CSSM_DL_DB_RECORD_ANY:
+		return 0
+	case CSSM_DL_DB_RECORD_CERT:
+		return 4
+	case CSSM_DL_DB_RECORD_CRL:
+		return 0
+	case CSSM_DL_DB_RECORD_POLICY:
+		return 3
+	case CSSM_DL_DB_RECORD_GENERIC:
+		return 2
+	case CSSM_DL_DB_RECORD_PUBLIC_KEY:
+		return 0
+	case CSSM_DL_DB_RECORD_PRIVATE_KEY:
+		return 0
+	case CSSM_DL_DB_RECORD_SYMMETRIC_KEY:
+		return 0
+	case CSSM_DL_DB_RECORD_ALL_KEYS:
+		return 0
+	case CSSM_DL_DB_RECORD_GENERIC_PASSWORD:
+		return 16
+	case CSSM_DL_DB_RECORD_INTERNET_PASSWORD:
+		return 20
+	case CSSM_DL_DB_RECORD_APPLESHARE_PASSWORD:
+		return 19
+	case CSSM_DL_DB_RECORD_USER_TRUST:
+		return 0
+	case CSSM_DL_DB_RECORD_X509_CRL:
+		return 0
+	case CSSM_DL_DB_RECORD_UNLOCK_REFERRAL:
+		return 0
+	case CSSM_DL_DB_RECORD_EXTENDED_ATTRIBUTE:
+		return 0
+	case CSSM_DL_DB_RECORD_X509_CERTIFICATE:
+		return 9
+	case CSSM_DL_DB_RECORD_METADATA:
+		return 9
+	default:
+		return 0
+	}
+}

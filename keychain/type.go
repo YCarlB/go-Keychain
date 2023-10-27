@@ -42,10 +42,11 @@ type RecordHeader struct {
 }
 
 type Record struct {
-	Header RecordHeader
+	Header          RecordHeader
+	AttributeOffset []int32
 }
 
-var (
+const (
 	signature = "kych"
 )
 
